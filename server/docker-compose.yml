@@ -13,7 +13,7 @@ services:
       - LOG_DIRECTORY=""
       - LOG_FILENAME=""
       - MONGO_DATABASE=omdb-movies
-      - MONGO_CONNECTION=mongodb+srv://Adeel:91giga91@mongodbcluster.4tu9b.mongodb.net
+      - MONGO_CONNECTION=mongodb://localhost:27017
       - MONGO_ACCESS=retryWrites=true&w=majority
       - MONGO_KEEP_ALIVE=6h
       - BASE_URL=""
