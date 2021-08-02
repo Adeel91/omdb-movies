@@ -1,0 +1,14 @@
+{
+  "name": "omdb-movies-test",
+  "version": "0.0.1",
+  "description": "OMDB Movies client tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "author": "Muhammad Adeel",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.1.0"
+  }
+}

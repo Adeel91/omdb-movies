@@ -1,0 +1,162 @@
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.home-container .search {
+  align-items: start;
+  margin-left: 10px;
+}
+
+.search .search-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.search .search-wrapper input {
+  outline: 0;
+  height: 50px;
+  border-radius: 30px;
+  padding: 0 60px 0 15px;
+  background-color: #fdfbfb;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 15px;
+  width: 480px;
+}
+
+.search .search-wrapper .search-btn {
+  width: 40px;
+  position: absolute;
+  height: 40px;
+  right: 10px;
+  border-radius: 100%;
+  font-size: 20px;
+  background: #1fac63;
+  color: #fff;
+  border: 0;
+  top: 5px;
+}
+
+.search .search-wrapper .reset-btn {
+  position: absolute;
+  right: 50px;
+  font-size: 25px;
+  background: transparent;
+  color: #848484;
+  border: 0;
+  top: 5px;
+}
+
+.search-suggestions {
+  background: #fdfbfb;
+  border: 1px solid #ccc;
+  border-top: 0;
+  width: 480px;
+  margin-top: -60px;
+  overflow-y: scroll;
+  padding-top: 30px;
+  max-height: 300px;
+  position: absolute;
+  top: 80%;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.search-suggestions .autosuggest {
+  padding: 8px;
+  background: #fdfbfb;
+  cursor: pointer;
+}
+
+.search-suggestions .active {
+  background: #1fac632e;
+}
+
+.search-results {
+  height: 70vh;
+  overflow-y: scroll;
+  padding: 0 10px;
+}
+
+.search-results .card {
+  margin: 10px 0;
+  border-radius: 0.5rem;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.search-results .card .content {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-results .card .content .picture {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.search-results .card .content .info {
+  margin-left: 1.25rem;
+}
+
+.search-results .card .book-picture {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 1.5rem;
+}
+
+.search-results .card .content .picture .card-img {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-results .card .content .book-picture .card-img {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.search-results .card .content .title {
+  margin-top: 0.5rem;
+  color: #1fac63;
+}
+
+.search-results .card .content .text {
+  font-size: 0.65rem;
+}
+
+.search-results-message {
+  margin-top: 20px;
+  color: #1fac63;
+}
+
+.home-container {
+  margin-top: 120px;
+}
+
+.filter-row {
+  margin-left: 10px;
+}
+
+.filter-row .option {
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter-row .filter-active {
+  color: #1fac63;
+  border-bottom: 1px solid #1fac63;
+  padding-bottom: 5px;
+  font-weight: bold;
+}

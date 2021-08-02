@@ -1,0 +1,56 @@
+version: '3.6'
+
+services:
+  api:
+    image: node:10.15.3-alpine
+    container_name: omdb-movies-application
+    build: .
+    ports:
+      - 5000:5000
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - LOG_DIRECTORY=""
+      - LOG_FILENAME=""
+      - MONGO_DATABASE=omdb-movies
+      - MONGO_CONNECTION=mongodb+srv://Adeel:91giga91@mongodbcluster.4tu9b.mongodb.net
+      - MONGO_ACCESS=retryWrites=true&w=majority
+      - MONGO_KEEP_ALIVE=6h
+      - BASE_URL=""
+      - OMDB_BASE_URL=https://www.omdbapi.com
+      - OMDB_API_KEY=e1a73560
+      - OMDB_SEARCH_TERM=space
+      - OMDB_SEARCH_YEAR=2001
+      - OMDB_SEARCH_TYPE=movie
+      - ELASTIC_SEARCH_URL=localhost
+      - ELASTIC_SEARCH_PORT=9200
+    volumes:
+      - .:/usr/src/app/movies
+    command: npm run start
+    links:
+      - elasticsearch
+    depends_on:
+      - elasticsearch
+    networks:
+      - elastic
+
+  elasticsearch:
+    container_name: omdb-movies-elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.4
+    volumes: # Persist ES data in seperate "esdata" volume
+      - esdata:/usr/share/elasticsearch/data
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+    ports: # Expose Elasticsearch ports
+      - "9300:9300"
+      - "9200:9200"
+    networks:
+      - elastic
+
+volumes:
+  esdata:
+networks:
+  elastic:
+    driver: bridge

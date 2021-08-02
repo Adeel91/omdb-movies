@@ -1,0 +1,8 @@
+{
+  "overrides": [
+    {
+      "files": "*.overrides",
+      "options": { "parser": "less" }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+.skeleton-loader {
+  border-radius: 15px !important;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+}

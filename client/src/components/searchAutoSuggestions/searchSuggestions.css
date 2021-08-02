@@ -1,0 +1,27 @@
+.search-suggestions {
+  background: #fdfbfb;
+  border: 1px solid #ccc;
+  border-top: 0;
+  width: 480px;
+  margin-top: -20px;
+  overflow-y: scroll;
+  padding-top: 30px;
+  max-height: 300px;
+  position: absolute;
+  top: 80%;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.search-suggestions .autosuggest {
+  padding: 8px;
+  background: #fdfbfb;
+  cursor: pointer;
+}
+
+.search-suggestions .active,
+.search-suggestions .autosuggest:hover {
+  background: #1fac632e;
+}

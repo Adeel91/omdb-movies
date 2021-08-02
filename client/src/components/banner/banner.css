@@ -1,0 +1,55 @@
+.banner {
+  background-color: #1c1c1c;
+  background-size: 100%, cover !important;
+  background-position: center, center !important;
+  width: 100%;
+  height: 550px;
+  position: relative;
+  animation: animateBanner 1s;
+}
+
+@keyframes animateBanner {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.banner-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.banner-text {
+  z-index: 100;
+  max-width: 700px;
+  position: absolute;
+  bottom: 20px;
+  min-height: 100px;
+  color: #fff;
+}
+
+.banner-text h1 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.banner-text p {
+  font-size: 18px;
+  line-height: 35px;
+  color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+  .banner-text {
+    max-width: 100%;
+  }
+
+  .banner-text p {
+    text-align: justify;
+    padding: 0 15px 0 0;
+    line-height: 30px;
+  }
+}
